@@ -18,24 +18,15 @@
   }
 
   &__item {
+   
+    @media screen and (min-width: $breakpoint-sm) {
+      flex: 1 1 45%; 
+    }
 
-    flex: 1 1 100%;
-
-  @media screen and (min-width: $breakpoint-sm) {
-    flex: 1 1 50%;
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 1 1 28%; 
+    }
   }
-
-
-  @media screen and (min-width: $breakpoint-md) {
-    flex: 1 1 33.3333%;
-  }
-
-  @media screen and (min-width: $breakpoint-lg) {
-    flex: 1 1 25%;
-  }
-        
-      }
-        
    
   
 

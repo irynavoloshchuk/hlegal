@@ -2,6 +2,9 @@
   padding: 60px 0;
   color: $basic-white;
 
+
+  
+
   &__title {
     @include hero;
     margin-bottom: 60px;
@@ -14,10 +17,34 @@
     gap: 60px;
   }
 
-  &__item{
-    flex: 1 1 25%;
-  
+  &__item {
+
+    flex: 1 1 100%;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    flex: 1 1 50%;
   }
+
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex: 1 1 33.3333%;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex: 1 1 25%;
+  }
+        
+      }
+        
+   
+  
+
+ 
+  
+  
+
+  
+ 
 
   &__item-image {
     margin-bottom: 30px;
@@ -28,12 +55,14 @@
   }
 
   &__item-icon {
-    width: 64px;
-    height: 64px;
+    width: 92px;
+    height: 92px;
     fill: $gradient-red-text;
     border-radius: 24px;
     padding: 14px;
-    background: $basic-white;}
+    background: $basic-white;
+
+  }
    
     &__subtitle {
       @include base-link;
@@ -48,8 +77,9 @@
     
 
     }
-   
   }
+   
+  
 
 
 

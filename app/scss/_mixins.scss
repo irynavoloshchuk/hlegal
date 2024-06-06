@@ -1,0 +1,59 @@
+// !MIXINS
+
+@mixin main-gradient-text($bg-color: $gradient-red-text) {
+  background: $bg-color;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin title($color: $basic-white) {
+  font-size: 38px;
+  font-weight: 700;
+  color: $color;
+}
+
+@mixin subtitle($color: #000) {
+  font-weight: 700;
+  font-size: 30px;
+  color: $color;
+
+  // @include vieport-md {
+  // 	font-size: 38px;
+  // }
+  @media (min-width: $breakpoint-md) {
+    font-size: 38px;
+  }
+}
+
+@mixin paragraph ($color:$basic-white){
+  color: $color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin hero ($color:$accent-color){
+  color: $color;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin base-link($color: $regular-color, $hover: $accent-color) {
+  color: $color;
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:hover::before {
+    border-color: $accent-color;
+  }
+}

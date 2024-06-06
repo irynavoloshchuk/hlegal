@@ -1,0 +1,55 @@
+.services {
+  padding: 60px 0;
+  color: $basic-white;
+
+  &__title {
+    @include hero;
+    margin-bottom: 60px;
+  }
+
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  &__item{
+    flex: 1 1 25%;
+  
+  }
+
+  &__item-image {
+    margin-bottom: 30px;
+  
+  
+   
+
+  }
+
+  &__item-icon {
+    width: 64px;
+    height: 64px;
+    fill: $gradient-red-text;
+    border-radius: 24px;
+    padding: 14px;
+    background: $basic-white;}
+   
+    &__subtitle {
+      @include base-link;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      
+
+    }
+    &__description {
+      @include paragraph;
+    
+
+    }
+   
+  }
+
+
+

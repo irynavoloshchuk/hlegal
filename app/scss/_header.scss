@@ -4,8 +4,6 @@
   flex-flow: column;
   justify-content: space-between;
   background: url("../images/symbol.svg") no-repeat center/auto 100%;
-  &__header {
-  }
 
   &__title {
     @include title;
@@ -19,12 +17,22 @@
     height: 42px;
     margin: 30px auto;
     border-radius: $radius-rounded;
-    border: 1px solid $basic-white;
+    border: 2px solid rgba($basic-white, 0.5);
     position: relative;
+ 
 
     &::before {
       position: absolute;
       content: "";
+      border-bottom: 2px solid $basic-white;
+      border-right: 2px solid $basic-white;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 50%;
+      transform:translate(-50%, -60%) rotate(45deg);
+
+   
     }
   }
 }
@@ -210,9 +218,10 @@
   }
 
   &__nav-link {
-    color: $basic-white;
+   
     text-decoration: none;
     font-weight: 700;
     border-bottom: 2px solid transparent;
+    @include base-link ($color: $basic-white);
   }
 }

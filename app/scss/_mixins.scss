@@ -25,18 +25,8 @@
   }
 }
 
-@mixin paragraph ($color:$basic-white){
-  color: $color;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-}
 
-@mixin hero ($color:$accent-color){
-  color: $color;
-  font-weight: 700;
-  font-size: 38px;
-}
+
 
 @mixin flex-center {
   display: flex;

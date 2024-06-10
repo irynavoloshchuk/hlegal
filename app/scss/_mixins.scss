@@ -52,3 +52,13 @@
 
 
 }
+
+@mixin button ($color: $basic-white,   $bg-color: $regular-color) {
+  color: $color;
+  background: $bg-color;
+  border-radius: 12px;
+  padding: 18px 30px;
+
+  
+
+}

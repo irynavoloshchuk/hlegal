@@ -44,6 +44,34 @@ body {
   }
 }
 
+.narrow-container {
+  // від 0 до 767пх включно
+  padding: 0 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    // від 768 до 1023 включно
+    max-width: 648px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    // від 1024 до 1439 включно
+    max-width: 904px;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    // від 1440 до 1919 включно
+    max-width: 1080px;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+    // від 1920 до бескінечності
+    max-width: 1380px;
+  }
+}
+
+
+
 .dotted {
   width: 6px;
   height: 6px;
@@ -62,4 +90,22 @@ body {
   &--grey{
     background: $text-color;
   }
+}
+
+button {
+ cursor: pointer;
+  padding: 18px 30px;
+  color: $basic-white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 18px;
+  background: $regular-color;
+  box-shadow: 0px 0px 20px 0px #24A3FF80;
+
+
+  
+}
+
+button:hover {
+  background-color: $hover-color;
 }

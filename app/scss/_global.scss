@@ -14,6 +14,8 @@ body {
 
 .wrapper {
   background: $gradient-supersoft;
+  border-radius: 0px 0px 12px 12px;
+
 }
 
 .container {
@@ -37,7 +39,7 @@ body {
   }
 
   @media screen and (min-width: $breakpoint-xxl) {
-    // від 1920 до бускінечності
+    // від 1920 до бескінечності
     max-width: 1660px;
   }
 }
@@ -47,6 +49,8 @@ body {
   height: 6px;
   display: none;
   border-radius: $radius-rounded;
+  
+  
 
   @media screen and (min-width: $breakpoint-md) {
     display: inline-block;
@@ -54,5 +58,8 @@ body {
 
   &--white {
     background: $basic-white;
+  }
+  &--grey{
+    background: $text-color;
   }
 }

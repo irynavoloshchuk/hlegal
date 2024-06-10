@@ -38,6 +38,9 @@
   color: $color;
   text-decoration: none;
   transition: 0.2s;
+  font-weight: 700;
+  
+
 
   &:hover {
     color: $hover;
@@ -46,4 +49,6 @@
   &:hover::before {
     border-color: $accent-color;
   }
+
+
 }

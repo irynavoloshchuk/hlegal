@@ -1,0 +1,135 @@
+.publications {
+  padding-top: 60px;
+  background: $bg-color;
+  
+
+
+
+    &__title {
+        @include title;
+        margin-bottom: 30px;
+        @include main-gradient-text;
+      }
+    
+      &__link {
+        @include base-link;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-right: 10px;
+        position: relative;
+    
+        &::before {
+          position: absolute;
+          content: "";
+          
+          right: 0; 
+          top: 50%; 
+          transform: translateY(-50%) rotate(-45deg); 
+       
+          width:8px;
+          height: 8px;
+         
+          border-bottom: 2px solid $regular-color;
+          border-right: 2px solid $regular-color;
+          transition: 0.2s;
+        }
+        
+        
+      }
+
+      &__posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        @media screen and (min-width: $breakpoint-md) {
+          margin-right: calc(-50vw + 424px);
+          margin-left: calc(-50vw + 424px);
+      }
+  
+      @media screen and (min-width: $breakpoint-lg) {
+          margin: 0;
+      }
+        
+      }
+
+
+        
+      &__post {
+       
+          flex: 1 1 100%;
+          max-width: 100%;
+       
+       
+        
+      
+          @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 31%;
+          
+          }}
+    
+
+      &__post-link {
+        text-decoration: none;
+      }
+
+      &__post-thumbnail {
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+       
+    
+
+      
+      }
+
+      &__post-content {
+        background-color: $basic-white;
+        white-space: normal;
+        padding: 30px;
+    
+        border-radius: 0px 0 8px 8px;
+      
+        
+        
+
+      
+        
+    
+        
+      }
+
+      &__post-subtitle {
+        @include base-link;
+        font-size: 16px;
+        
+      
+
+      }
+      &__post-date {
+        text-transform: uppercase;
+        color: $text-color;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 15px 0;
+        border-bottom: solid 4px $separator-color;
+        margin-bottom: 15px;
+
+      }
+
+      &__post-preview {
+        font-size: 14px;
+        color:  #000000;
+        
+
+
+      }
+    }
+  
+    

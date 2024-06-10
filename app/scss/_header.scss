@@ -19,6 +19,7 @@
     border-radius: $radius-rounded;
     border: 2px solid rgba($basic-white, 0.5);
     position: relative;
+    @include base-link;
  
 
     &::before {
@@ -31,11 +32,23 @@
       top: 50%;
       left: 50%;
       transform:translate(-50%, -60%) rotate(45deg);
+     
+    }
+    
+      &:hover {
+        border-color: $accent-color; 
+  
+        &::before {
+          border-color: $accent-color;
+        }
+      }
+
 
    
     }
+  
   }
-}
+
 
 .header {
   padding-bottom: 10px;
@@ -72,8 +85,7 @@
     display: flex;
   }
 
-  &__languages-item {
-  }
+
 
   &__languages-link {
     color: $basic-white;
@@ -106,7 +118,7 @@
     display: none;
     @media screen and (min-width: $breakpoint-md) {
       display: block;
-      color: $basic-white;
+    
     
     }
   }
@@ -118,9 +130,12 @@
   &__social-link-icon {
     width: 24px;
     height: 24px;
-    fill: none;
+    
     fill: $basic-white;
     display: block;
+    &:hover {
+			fill: $accent-color;
+		}
 
     
 	
@@ -167,10 +182,14 @@
     height: 18px;
     position: relative;
     cursor: pointer;
+
+  
     @media screen and (min-width: $breakpoint-md) {
       display: none;
+  
     }
-
+   
+   
     &::before,
     &::after,
     span {
@@ -181,47 +200,199 @@
       right: 0;
       height: 2px;
       background: $basic-white;
+ 
+ 
     }
+ 
 
-    &::after {
+    &::after  {
       top: auto;
-      bottom: 0;
+      bottom: 0;  
+    
     }
 
     span {
       top: 50%;
       transform: translateY(-50%);
     }
-  }
+  
+    }
+ 
 
   &__nav {
-    display: none;
+    
+    position: fixed;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    padding: 12px;
+    background: $basic-white;
+    z-index: 10;
+    border-radius: 12px 12px 0px 0px;
+    transform: translateY(101%);
+    transition: transform 0.2s linear;
+    &.active {
+      transform: translateY(0);
+    }
+   
 
     @media screen and (min-width: $breakpoint-md) {
-      display: block;
+      position: static;
+      background: transparent;
+      padding: 0;
+      transform: translateY(0);
     }
   }
 
   &__nav-close {
+    
+    margin-bottom: 20px;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+  
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+
+    &::before,
+    &::after  {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background: #EC6F5D;
+      transform: rotate(-45deg);
+      margin-top: 1px;
+
+    }
+    &::after  {
+      transform: rotate(45deg);
+
+    }
+  
   }
 
   &__nav-list {
     display: flex;
     gap: 15px;
+    flex-flow: column;
+    font-size: 24px;
+    
+   
+ 
+
+    @media screen and (min-width: $breakpoint-md) {
+      flex-flow: row;
+      font-size: 16px;
+
+    
+    }
 
     @media screen and (min-width: $breakpoint-lg) {
       justify-content: flex-end;
     }
   }
+  
 
   &__nav-item {
+
+    text-align: center;
+    border-radius: 12px;
+    padding: 7px 0;
+    @include base-link;
+  
+  
+
+  
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 0;
+      border-radius: 0;
+      
+      @include base-link ($color: $basic-white, $hover: $basic-white);
+      
+   
+      
+    
+    }
+
+
+    
+
+ 
   }
 
   &__nav-link {
-   
+    background: $bg-color;
     text-decoration: none;
     font-weight: 700;
-    border-bottom: 2px solid transparent;
-    @include base-link ($color: $basic-white);
+ 
+    color: inherit;
+    padding: 7px;
+    display: block;
+    position: relative;
+    border-radius: 12px;
+
+  
+  
+  
+
+  
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: $basic-white; 
+      transition: width 0.2s;
+    
+    
+    }
+    
+ 
+    
+   
+  
+    &:hover::before {
+      width: 100%;
+      
+    }
+
+
+
+    
+
+ 
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 0;
+      background: transparent;
+          
+
+    &.active {
+      color: $accent-color;
+
+      &::before {
+        width: 100%;
+        background-color: $accent-color;
+      }
+    }
+
+    &.active:hover::before {
+      background-color: $accent-color;
+    }
+ 
+    
+
+    }
+   
   }
 }

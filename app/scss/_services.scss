@@ -1,11 +1,40 @@
 .services {
   padding: 60px 0;
   color: $basic-white;
+  position: relative;
+ 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 10px;
+   
+  }
+
+  &::before {
+    background: #cacadb; // First shadow background color
+    left: 20px;
+    right: 20px;
+    border-radius: 0px 0px 12px 12px;
+
+
+  }
+
+  &::after {
+    bottom: -20px;
+    background: #e7e7f2; // Second shadow background color
+    border-radius: 0px 0px 12px 12px;
+    left: 40px;
+    right: 40px;
+  }
+
+
 
   &__title {
     @include title;
     margin-bottom: 60px;
-    @include main-gradient-text
+    @include main-gradient-text;
   }
 
   &__link {
@@ -37,7 +66,6 @@
   }
 
 
-
   &__items {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +79,7 @@
     }
 
     @media screen and (min-width: $breakpoint-md) {
-      flex: 5 1 25%; 
+      flex: 1 1 25%; 
     }
 
   
@@ -70,8 +98,6 @@
   &__item-image {
     margin-bottom: 30px;
   
-  
-   
 
   }
 
@@ -88,7 +114,6 @@
     &__subtitle {
       @include base-link;
       font-size: 22px;
-      font-weight: 700;
       margin-bottom: 15px;
       
 

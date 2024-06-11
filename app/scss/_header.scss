@@ -183,6 +183,8 @@
     position: relative;
     cursor: pointer;
 
+
+
   
     @media screen and (min-width: $breakpoint-md) {
       display: none;
@@ -200,16 +202,24 @@
       right: 0;
       height: 2px;
       background: $basic-white;
+     
+
+    
  
  
     }
+ 
  
 
     &::after  {
       top: auto;
-      bottom: 0;  
+      bottom: 0;
+    
+      
     
     }
+
+  
 
     span {
       top: 50%;

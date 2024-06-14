@@ -1,49 +1,93 @@
 .publications {
   padding-top: 60px;
   background: $bg-color;
+
+
+  &__switch-buttons {
+    
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    
+    
+    
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -10;
+    
+    }
+    
+    input+label {
+      display: flex;
+      width: 227px;
+      height: 42px;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      background: $separator-color;
+     
+     
+    
+    
+    }
+    
+  
+    
+
+
+    
+     input+label::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+     
+      left: 2px;
+      width: 120px;
+      height: 38px;
+      border-radius: 10px;
+      background-color: $basic-white ;
+      
+      transition: all .3s linear;
+    }
+
+ 
+    
+    span {
+      color: $main-color;
+      font-weight: 700;
+      position: relative;
+      flex: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    input:checked+label::before {
+      transform: translateX(100%);
+      background-color: #fff; 
+    }
+
+
+  }
+
+
+
+
+
   
 
 
-
-    &__title {
-        @include title;
-        margin-bottom: 30px;
-        @include main-gradient-text;
-      }
-    
-      &__link {
-        @include base-link;
-        margin-bottom: 10px;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding-right: 10px;
-        position: relative;
-    
-        &::before {
-          position: absolute;
-          content: "";
-          
-          right: 0; 
-          top: 50%; 
-          transform: translateY(-50%) rotate(-45deg); 
-       
-          width:8px;
-          height: 8px;
-         
-          border-bottom: 2px solid $regular-color;
-          border-right: 2px solid $regular-color;
-          transition: 0.2s;
-        }
-        
-        
-      }
 
       &__posts {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
+        height: 100%;
+        
 
         @media screen and (min-width: $breakpoint-md) {
           margin-right: calc(-50vw + 424px);
@@ -62,6 +106,11 @@
        
           flex: 1 1 100%;
           max-width: 100%;
+          background-color: $basic-white;
+          border-radius: 8px 8px 8px 8px;
+         
+      
+        
        
        
         
@@ -69,14 +118,21 @@
           @media screen and (min-width: $breakpoint-md) {
             flex: 1 1 31%;
           
+           
+          
+          
           }}
     
 
       &__post-link {
         text-decoration: none;
+        display: block;
+     
+        
       }
 
       &__post-thumbnail {
+        overflow: hidden;
 
         img {
           width: 100%;
@@ -90,24 +146,17 @@
       }
 
       &__post-content {
-        background-color: $basic-white;
-        white-space: normal;
+    
         padding: 30px;
-    
-        border-radius: 0px 0 8px 8px;
-      
-        
-        
+       
 
-      
-        
-    
-        
+       
       }
 
       &__post-subtitle {
         @include base-link;
         font-size: 16px;
+        
         
       
 
@@ -126,6 +175,10 @@
       &__post-preview {
         font-size: 14px;
         color:  #000000;
+
+      
+       
+       
         
 
 

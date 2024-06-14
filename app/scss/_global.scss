@@ -16,6 +16,10 @@ body {
   background: $gradient-supersoft;
   border-radius: 0px 0px 12px 12px;
 
+  &--white {
+    background: $basic-white;
+  }
+
 }
 
 .container {
@@ -79,6 +83,7 @@ body {
   border-radius: $radius-rounded;
   
   
+  
 
   @media screen and (min-width: $breakpoint-md) {
     display: inline-block;
@@ -109,3 +114,5 @@ button {
 button:hover {
   background-color: $hover-color;
 }
+
+

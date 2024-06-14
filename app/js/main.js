@@ -13,6 +13,8 @@
 	})
 })();
 
+
+
 (() => {
 	const tabsItems = document.querySelectorAll('.tabs__links-item')
 	const tabsBlocks = document.querySelectorAll('.tabs__content-item')
@@ -31,3 +33,33 @@
 	})
 
 })();
+
+const swiper = new Swiper('.swiper', {
+	grabCursor: true,
+	effect: "creative",
+	creativeEffect: {
+		prev: {
+			shadow: true,
+			translate: ["-20%", 0, -1],
+		},
+		next: {
+			translate: ["100%", 0, 0],
+		},
+	},
+	// loop: true,
+	// autoplay: {
+	// 	delay: 3000,
+	// },
+	// slidesPerView: 1,
+	// breakpoints: {
+	// 	768: {
+	// 		slidesPerView: 2
+	// 	},
+	// },
+	// spaceBetween: 30,
+
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});

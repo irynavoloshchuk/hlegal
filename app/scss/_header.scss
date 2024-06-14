@@ -49,6 +49,15 @@
   
   }
 
+  .head_without-logo {
+
+
+     &--white {
+    background-color: white;
+    
+  }
+  }
+
 
 .header {
   padding-bottom: 10px;
@@ -87,7 +96,7 @@
 
 
 
-  &__languages-link {
+  &__languages-link, &__languages-link--grey {
     color: $basic-white;
     font-weight: 700;
     text-decoration: none;
@@ -98,7 +107,23 @@
     &.active {
       background: $accent-color;
     }
+
+&--grey {
+  color: $text-color;
+
+}
+   
+
+   
+   
   }
+
+
+
+     
+    
+  
+
 
   &__address {
     display: none;
@@ -112,7 +137,19 @@
     color: $basic-white;
     font-weight: 700;
     text-decoration: none;
+
+  
+  
   }
+  &__phone--grey {
+    color: $text-color; 
+    font-weight: 700; 
+    text-decoration: none; 
+  }
+
+
+
+ 
 
   &__social {
     display: none;
@@ -133,16 +170,29 @@
     
     fill: $basic-white;
     display: block;
+    
+
     &:hover {
 			fill: $accent-color;
 		}
-
+   
     
 	
 
    
     
   }
+   // changing color for white menu
+
+  &__social-link--grey &__social-link-icon {
+    fill: $text-color;
+
+    &:hover{
+      fill: $accent-color;
+    }
+  }
+
+
 
 
   &__box {
@@ -177,11 +227,13 @@
     }
   }
 
-  &__box-burger {
+  &__box-burger, &__box-burger--regular {
     width: 24px;
     height: 18px;
     position: relative;
     cursor: pointer;
+
+
 
 
 
@@ -225,8 +277,21 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
+    // changing color for white menu
+
+    &--regular {
+      &::before, &::after, span {
+        background: $main-color; 
+      }
+
+    }
+
+ 
   
     }
+
+  
  
 
   &__nav {
@@ -292,6 +357,8 @@
     gap: 15px;
     flex-flow: column;
     font-size: 24px;
+   justify-content: center;
+   text-align: center;
     
    
  
@@ -309,100 +376,123 @@
   }
   
 
-  &__nav-item {
 
-    text-align: center;
-    border-radius: 12px;
-    padding: 7px 0;
-    @include base-link;
-  
-  
-
-  
-
-    @media screen and (min-width: $breakpoint-md) {
-      padding-bottom: 0;
-      border-radius: 0;
-      
-      @include base-link ($color: $basic-white, $hover: $basic-white);
-      
-   
-      
-    
-    }
+&__nav-item {
+  text-align: center;
+  border-radius: 12px;
+ color: $regular-color;
 
 
-    
 
  
+
+  @media screen and (min-width: $breakpoint-md) {
+      @include base-link($color: $basic-white, $hover: $basic-white);
   }
 
-  &__nav-link {
-    background: $bg-color;
-    text-decoration: none;
-    font-weight: 700;
- 
-    color: inherit;
-    padding: 7px;
-    display: block;
-    position: relative;
-    border-radius: 12px;
+}
 
-  
-  
-  
-
-  
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: $basic-white; 
-      transition: width 0.2s;
-    
-    
-    }
-    
- 
-    
+&__nav-item &__nav-link {
+  &:hover {
+    background-color: $separator-color;
    
-  
-    &:hover::before {
-      width: 100%;
-      
+   }
+
+   @media screen and (min-width: $breakpoint-md) {
+
+
+
+    &.hover {
+      background: transparent;
     }
 
-
-
-    
-
+  
+   }
  
+}
 
-    @media screen and (min-width: $breakpoint-md) {
+&__nav-link {
+  background: $bg-color;
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+  padding: 7px;
+  display: block;
+  position: relative;
+  border-radius: 12px;
+
+  @media screen and (min-width: $breakpoint-md) {
       padding: 0;
       background: transparent;
-          
-
-    &.active {
-      color: $accent-color;
+     
 
       &::before {
-        width: 100%;
-        background-color: $accent-color;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: $basic-white;
+          transition: width 0.2s;
       }
-    }
 
-    &.active:hover::before {
-      background-color: $accent-color;
-    }
- 
+      &:hover::before {
+          width: 100%;
+        
+      }
+
+   
     
 
-    }
-   
+      &.active {
+          color: $accent-color;
+
+          &::before {
+              width: 100%;
+              background-color: $accent-color;
+          }
+      }
+
+      &.active:hover::before {
+          background-color: $accent-color;
+      }
   }
 }
+
+&__nav-item--blue &__nav-link {
+  color: $regular-color;
+
+  &.active {
+    color: $accent-color;
+  }
+  &:hover {
+    background-color: $separator-color;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+  
+
+      &::before {
+          background-color: $accent-color;
+      }
+
+      &:hover::before {
+          background-color: $accent-color;
+      }
+
+      &:hover {
+          color: $accent-color;
+          background: transparent;
+      }
+  }
+}
+}
+
+   
+  
+
+
+
+
+

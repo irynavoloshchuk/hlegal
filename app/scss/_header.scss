@@ -400,11 +400,10 @@
 
    @media screen and (min-width: $breakpoint-md) {
 
-
-
-    &.hover {
-      background: transparent;
+    &:hover {
+    background: transparent;
     }
+    
 
   
    }
@@ -423,7 +422,10 @@
 
   @media screen and (min-width: $breakpoint-md) {
       padding: 0;
-      background: transparent;
+      background: none;
+
+
+   
      
 
       &::before {

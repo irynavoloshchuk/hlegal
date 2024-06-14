@@ -82,4 +82,9 @@
       }
     }
   }
+
+  .swiper-wrapper {
+    overflow: hidden;
+    border-radius: $radius-md 0 0 $radius-md;
+  }
   

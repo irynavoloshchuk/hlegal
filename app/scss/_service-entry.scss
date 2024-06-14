@@ -45,11 +45,9 @@
  
 
       @media screen and (min-width:$breakpoint-md){
-        display: flex;
-        flex: column;
         column-count: 2;
-        flex-wrap: wrap;
         column-gap: 60px;
+       
         
       
       }
@@ -62,11 +60,11 @@
       margin-left: 14px;
    
 
-      @media screen and (min-width:$breakpoint-md){
+      // @media screen and (min-width:$breakpoint-md){
    
-      flex: 1 1 40%;
+  
 
-      }
+      // }
       color: $basic-white;
       
 

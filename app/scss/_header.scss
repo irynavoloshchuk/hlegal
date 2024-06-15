@@ -401,6 +401,7 @@
    @media screen and (min-width: $breakpoint-md) {
 
     &:hover {
+   
     background: transparent;
     }
     
@@ -468,6 +469,7 @@
 
   &.active {
     color: $accent-color;
+    font-size: 16px;
   }
   &:hover {
     background-color: $separator-color;

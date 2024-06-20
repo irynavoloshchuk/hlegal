@@ -115,4 +115,32 @@ button:hover {
   background-color: $hover-color;
 }
 
+.link-subtitle {
+  @include base-link;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-right: 8px;
+  position: relative;
+  letter-spacing: 1px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%) rotate(-45deg); 
+ 
+    width:8px;
+    height: 8px;
+   
+    border-bottom: 2px solid $regular-color;
+    border-right: 2px solid $regular-color;
+    transition: 0.2s;
+  }
+  
+  
+}
 

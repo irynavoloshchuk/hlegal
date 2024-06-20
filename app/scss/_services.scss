@@ -36,34 +36,7 @@
     margin-bottom: 60px;
     @include main-gradient-text;
   }
-
-  &__link {
-    @include base-link;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-right: 10px;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      
-      right: 0; 
-      top: 50%; 
-      transform: translateY(-50%) rotate(-45deg); 
-   
-      width:8px;
-      height: 8px;
-     
-      border-bottom: 2px solid $regular-color;
-      border-right: 2px solid $regular-color;
-      transition: 0.2s;
-    }
     
-    
-  }
 
 
   &__items {
